@@ -1,0 +1,19 @@
+{
+  "name": "controllacess",
+  "version": "1.0.0",
+  "description": "controle de acesso",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevRafaelCena/ControllAcess.git"
+  },
+  "author": "Rafael Cena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevRafaelCena/ControllAcess/issues"
+  },
+  "homepage": "https://github.com/DevRafaelCena/ControllAcess#readme"
+}
