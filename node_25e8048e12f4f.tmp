@@ -1,0 +1,24 @@
+var net = require('net');
+
+var client = new net.Socket();
+client.connect(2050, 'localhost', function() {
+    console.log('Connected');
+   // client.emit('1;500;LINHA1;LINHA2;2;')
+    client.write('1;500;Conectado;ao servidor;2;<CR>;')
+	//client.write('1;500;LINHA1;LINHA2;2;');
+});
+
+client.on('data', function(data) {
+    console.log('Received: ' + data);
+    client.write('1;0551;Rafael Cena;Acesso Liberado;<CR>;');
+    
+   // client
+    //client.write('5;100;0000000000000001;E;01/01/20;12:00:00;');
+  //  client.write('5;0550; Rafael Cena;  Acesso Liberado; ');
+	
+});
+
+client.on('close', function() {
+    client.destroy(); // kill client after server's response
+	console.log('Connection closed');
+});

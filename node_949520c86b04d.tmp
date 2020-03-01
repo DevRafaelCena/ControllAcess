@@ -1,0 +1,17 @@
+var net = require('net');
+var porta = 2050
+var host = '127.0.0.1'
+var servidor = net.createServer()
+
+servidor.listen(porta,function(socket){
+    console.log("servidor on...")
+    
+})
+
+servidor.on('connection',function(socket){
+    console.log('nova conexao')
+    socket.on('data',function(data){
+        servidor.emit('99;42;0;3;1;Conectado ca;2000;<CR>')
+        console.log('recebido: ' + data)
+    })
+})
