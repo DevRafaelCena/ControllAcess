@@ -1,6 +1,6 @@
 var net = require('net');
  var coletores = [{numero: 2, ip: "192.168.0.39", porta: '2050', nomeColetor: "Entrada02"},
- {numero: 3, ip: "192.168.0.15", porta: '2050', nomeColetor: "Entrada01"}
+ {numero: 3, ip: "192.168.0.9", porta: '2050', nomeColetor: "Entrada01"}
  ]
 
 var clientes =[]
@@ -10,7 +10,6 @@ var clientes =[]
 for(let i=0;i<coletores.length;i++){
    clientes.push(new net.Socket())
    clientes[i].connect(2050, coletores[i].ip, function() {
-      
       console.log("conectado ao" +coletores[i].nomeColetor); 
    
    });
