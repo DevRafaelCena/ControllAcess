@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/DevRafaelCena/ControllAcess/issues"
   },
-  "homepage": "https://github.com/DevRafaelCena/ControllAcess#readme"
+  "homepage": "https://github.com/DevRafaelCena/ControllAcess#readme",
+  "devDependencies": {
+    "serialport": "^9.0.0"
+  },
+  "dependencies": {
+    "readline": "^1.3.0"
+  }
 }
